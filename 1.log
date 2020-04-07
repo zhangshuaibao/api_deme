@@ -20,3 +20,5 @@
 2020-04-07 16:41:54,856 INFO [root] [testcase.py test_run_case:31] - [页面返回信息：{'code': 1000, 'msg': 'success', 'value': 1}]
 2020-04-07 16:44:32,276 INFO [root] [testcase.py test_run_case:31] - [页面返回信息：{'code': 0, 'msg': 'ok', 'value': 3}]
 2020-04-07 16:44:32,287 INFO [root] [testcase.py test_run_case:31] - [页面返回信息：{'code': 1000, 'msg': 'success', 'value': 1}]
+2020-04-07 16:46:02,162 INFO [root] [testcase.py test_run_case:31] - [页面返回信息：{'code': 0, 'msg': 'ok', 'value': 3}]
+2020-04-07 16:46:02,185 INFO [root] [testcase.py test_run_case:31] - [页面返回信息：{'code': 1000, 'msg': 'success', 'value': 1}]
