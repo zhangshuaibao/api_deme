@@ -5,6 +5,7 @@ import requests
 
 import setting
 
+
 def data_processing(variate):
     """
     判断数据类型是否为字典，若不是dict则转换成dict
@@ -39,6 +40,7 @@ def write_data(user, pwd):
     t = {'token': '{}'.format(token)}
     with codecs.open(setting.TEST_JSON, 'w', encoding='utf-8') as f:
         json.dump(t, f)
+
 
 def load_data(msg=False, user=None, pwd=None) -> dict:
     """

@@ -2,6 +2,8 @@ import logging
 
 from logging import handlers
 
+from setting import LOG_PATH
+
 
 def init_logging():
     # 1 初始化日志器
@@ -11,7 +13,7 @@ def init_logging():
     # 3 创建控制处理器
     sh = logging.StreamHandler()
     # 4 创建文件处理器
-    fh = logging.handlers.TimedRotatingFileHandler(filename='1.log', when='D', interval=1, backupCount=7,
+    fh = logging.handlers.TimedRotatingFileHandler(filename=LOG_PATH, when='D', interval=1, backupCount=7,
                                                    encoding='utf-8')
     fmt = "%(asctime)s %(levelname)s [%(name)s] [%(filename)s %(funcName)s:%(lineno)d] - [%(message)s]"
     formatter = logging.Formatter(fmt)
