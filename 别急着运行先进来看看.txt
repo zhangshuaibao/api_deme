@@ -1,0 +1,23 @@
+*************框架说明**************
+
+框架结构讲解：（不看也给我去点个赞！）
+python接口自动化测试框架结构 ( 第一章)
+——https://blog.csdn.net/weixin_45669374/article/details/105240916
+python接口自动化测试框架结构 ( 第二章)
+——https://blog.csdn.net/weixin_45669374/article/details/105247850
+python接口自动化测试框架结构 ( 第三章)
+——https://blog.csdn.net/weixin_45669374/article/details/105250939
+python接口自动化测试框架结构 ( 第四章)
+——https://blog.csdn.net/weixin_45669374/article/details/105273087
+
+
+*************运行顺序**************
+1、启动sever.py
+2、运行run_suite.py
+3、生成报告和日志，并在results.xlsx内新增内容
+
+
+作者vx:
+    dengwoi
+
+有问必答！！！！
