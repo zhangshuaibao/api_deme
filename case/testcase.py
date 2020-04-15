@@ -1,5 +1,8 @@
+import codecs
+import json
 import unittest
 import ddt
+
 from lib.sendrequest import send_requests
 from lib.utlis import *
 from setting import case_root, results_root
@@ -34,6 +37,10 @@ class TestCase(unittest.TestCase):
         code = data['code']  # 获取表内code
         status = data['status']  # 获取表内状态码
         msg = data['msg']  # 获取响应状态
+        if data['precondition'] == 1:
+            with codecs.open(setting.TEST_JSON, 'w', encoding='utf-8') as f:
+                json.dump(self.result, f)
+
         if code == self.result['code'] and status == self.response.status_code \
                 and msg == self.result['msg']:  # 判断返回数据是否和表内数据相同
             self.msg_data = "PASS"

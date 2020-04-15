@@ -72,7 +72,8 @@ def excel_dict(data):
         '请求头': 'header',
         '响应数据状态/json返回数据的code': 'code',
         '状态码': 'status',
-        '响应状态': 'msg'
+        '响应状态': 'msg',
+        '前置条件': 'precondition'
     }
     head = []
     list_dict_data = []
