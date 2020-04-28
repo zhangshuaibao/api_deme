@@ -9,6 +9,8 @@ python接口自动化测试框架结构 ( 第三章)
 ——https://blog.csdn.net/weixin_45669374/article/details/105250939
 python接口自动化测试框架结构 ( 第四章)
 ——https://blog.csdn.net/weixin_45669374/article/details/105273087
+python接口自动化测试框架结构 ( 第五章)-数据关联
+——https://editor.csdn.net/md/?articleId=105813379
 
 
 *************运行顺序**************
@@ -23,8 +25,8 @@ python接口自动化测试框架结构 ( 第四章)
 
 *************更新内容**************
 2020-4-15
-更新完善功能数据关联、详情看文章：
+更新完善功能数据关联、详情看博客第五章：
 新增test_data文档：
 *用来存放接口返回的数据以供下个接口使用
-新增acquire()函数：
+新增data_association()函数：
 *处理数据关联的主函数

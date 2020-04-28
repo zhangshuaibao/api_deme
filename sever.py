@@ -21,7 +21,7 @@ def less():
     print(request.headers)
     print(type(request.json))
     print(request.json)
-    result = request.json['a'] - int(request.json['b'])
+    result = int(request.json['a']) - int(request.json['b'])
     return {
         'code': 1000,
         'msg': 'success',

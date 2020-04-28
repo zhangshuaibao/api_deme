@@ -31,13 +31,15 @@ class TestCase(unittest.TestCase):
         :return:
         """
         self.response = send_requests(data)  # 返回response
-        print('________')
+        print('________________________________')
         logging.info("页面返回信息：%s" % self.response.json())
         self.result = self.response.json()
         code = data['code']  # 获取表内code
         status = data['status']  # 获取表内状态码
         msg = data['msg']  # 获取响应状态
+        # 判断前置条件是否为1
         if data['precondition'] == 1:
+            # 为1：将内容写进test_data文件用来替换下个接口的参数
             with codecs.open(setting.TEST_JSON, 'w', encoding='utf-8') as f:
                 json.dump(self.result, f)
 

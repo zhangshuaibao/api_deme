@@ -1,7 +1,7 @@
 import logging
 import requests
 
-from data.data_driven import load_data, acquire
+from data.data_driven import load_data, data_association
 from lib.utlis import get_test_url
 
 
@@ -23,7 +23,8 @@ def send_requests(apidata):
         if apidata["data"] == "":
             body_data = None
         else:
-            body_data = eval(acquire(load_data(), apidata['data']))
+            body_data = eval(data_association(load_data(), apidata['data']))
+        logging.info('请求参数:{}'.format(body_data))
         s = requests.session()
         re = s.request(method=method, url=get_test_url('loc') + url, headers=header,
                        json=body_data)
@@ -33,11 +34,11 @@ def send_requests(apidata):
 
 
 if __name__ == '__main__':
-    case_dict = {'id': 1.0, 'get_type': 'get', 'interface': '相加接口',
-                 'title': '参数正常-成功', 'header': '', 'url': '/add',
-                 'data': "{'a': 2, 'b': 1}",
-                 'expected': "{'code': 0, 'msg': 'ok', 'value': 3}", 'code': 0,
-                 'status': 200, 'msg': 'ok'}
+    case_dict = {'id': 3.0, 'get_type': 'post', 'interface': '相减接口', 'title': '参数正常-成功', 'header': '',
+                 'precondition': '', 'url': '/less', 'data': "{'a': '^code', 'b':'^value'}",
+                 'expected': "{'code': 1000, 'msg': 'success', 'value': -3}", 'code': 1000.0, 'status': 200.0,
+                 'msg': 'success'}
+
     re = send_requests(case_dict)
     print(re.url)
     print(re.json())
