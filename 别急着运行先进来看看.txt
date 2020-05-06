@@ -10,7 +10,7 @@ python接口自动化测试框架结构 ( 第三章)
 python接口自动化测试框架结构 ( 第四章)
 ——https://blog.csdn.net/weixin_45669374/article/details/105273087
 python接口自动化测试框架结构 ( 第五章)-数据关联
-——https://editor.csdn.net/md/?articleId=105813379
+——https://blog.csdn.net/weixin_45669374/article/details/105813379
 
 
 *************运行顺序**************
