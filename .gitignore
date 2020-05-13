@@ -12,3 +12,16 @@ target
 .metadata/
 classes/
 logs/
+*.log
+*.html
+.idea/
+rebel.xml
+__pycache__
+.pytest_cache
+.DS_Store
+.idea/
+deme.py
+results/
+log/
+report/
+demo.py
