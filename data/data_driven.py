@@ -26,7 +26,7 @@ def load_data() -> dict:
     """
     with open(setting.TEST_JSON, encoding='utf-8') as file_obj:
         for line in file_obj:
-            token_data = json.loads(line)
+            token_data = eval(line)
             return token_data
 
 
