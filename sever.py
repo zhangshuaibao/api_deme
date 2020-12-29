@@ -12,7 +12,7 @@ def add():
     return {
         'code': 0,
         'msg': 'ok',
-        'value': result
+        'value': [{'var': result}, {'num': 'niubi'}]
     }
 
 
@@ -21,11 +21,24 @@ def less():
     print(request.headers)
     print(type(request.json))
     print(request.json)
-    result = int(request.json['a']) - int(request.json['b'])
+    # result = int(request.json['a']) - int(request.json['b'])
     return {
         'code': 1000,
         'msg': 'success',
-        'value': result
+        'value': {'userid': 'liekai', 'pwd': '1234567'}
+    }
+
+
+@app.route('/less/niubi', methods=['POST'])
+def less_niubi():
+    print(request.headers)
+    print(type(request.json))
+    print(request.json)
+    # result = int(request.json['a']) - int(request.json['b'])
+    return {
+        'code': 1314,
+        'msg': 'success',
+        'value': '哈哈哈'
     }
 
 

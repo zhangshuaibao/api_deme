@@ -14,7 +14,7 @@ def send_requests(apidata):
     try:
         # 从读取的表格中获取响应的参数作为传递
         method = apidata["get_type"]
-        url = apidata["url"]
+        url = data_association(apidata["url"])
         if apidata["header"] == '':
             header = None
         else:
@@ -23,11 +23,15 @@ def send_requests(apidata):
         if apidata["data"] == "":
             body_data = None
         else:
-            body_data = eval(data_association(load_data(), apidata['data']))
+            body_data = eval(data_association(apidata['data']))
         logging.info('请求参数:{}'.format(body_data))
+        logging.info('请求url:{}'.format(get_test_url('loc') + url))
+
         s = requests.session()
         re = s.request(method=method, url=get_test_url('loc') + url, headers=header,
                        json=body_data)
+
+
         return re
     except Exception as error:
         logging.error("错误信息", error)

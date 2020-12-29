@@ -3,6 +3,7 @@ import json
 import unittest
 import ddt
 
+from data.data_driven import write_data
 from lib.sendrequest import send_requests
 from lib.utlis import *
 from setting import case_root, results_root
@@ -37,6 +38,10 @@ class TestCase(unittest.TestCase):
         code = data['code']  # 获取表内code
         status = data['status']  # 获取表内状态码
         msg = data['msg']  # 获取响应状态
+        rule = data['rule']  # 获取表内匹配规则
+        name = data['name']  # 获取表内变量名字
+        code = data['code']  # 获取表内code
+        write_data(data['precondition'], name, self.result, rule)
         # 判断前置条件是否为1
         if data['precondition'] == 1:
             # 为1：将内容写进test_data文件用来替换下个接口的参数
